@@ -1,7 +1,9 @@
 <h1>All The Campers</h1>
 
+<h3><%= link_to "BECOME A NEW CAMPER TODAY!!", new_camper_path %></h3>
+
 <ul>
   <% @campers.each do |camper| %>
-    <li><%= camper.name %></li>
+    <li><%= link_to camper.name, camper_path(camper) %></li>
   <% end %>
 </ul>
